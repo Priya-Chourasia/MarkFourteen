@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    background-color: aquamarine;
+}
+
+label{
+    display:block;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.output-box{
+    max-width: fit-content;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
