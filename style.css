@@ -1,16 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Nunito:wght@500&family=Open+Sans&family=Poppins:wght@300&family=Quicksand:wght@600&family=Roboto+Mono:ital,wght@0,500;1,700&family=Ubuntu&display=swap');
+* {
+    margin: 1rem;
+    box-sizing: border-box;
+    
+  }
 body{
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgb(254 205 211);
+    font-family: 'Nunito', sans-serif;
 }
-
 label{
-    display:block;
-    padding-bottom: 1rem;
     font-weight: bold;
 }
 
-.output-box{
-    max-width: fit-content;
-    padding: 1rem;
-    font-family: 'Courier New', Courier, monospace;
+#initial-price{
+    display: block;
+    font-size: large;
+    font-weight: 400;
+    margin:auto;
+    padding: 0.5rem 0.5rem;
 }
+#stock-quantity{
+    display: block;
+    font-size: large;
+    font-weight: 400;
+    margin:auto;
+    padding: 0.5rem 0.5rem;
+}
+    
+#current-price{
+    display: block;
+    font-size: large;
+    font-weight: 400;
+    margin:auto;
+    padding: 0.5rem 0.5rem;
+}
+
+.output-box{
+    font-size: large;
+        font-weight: 600;
+        margin: 2rem 0;
+        text-align: center;
+}
+#submit-btn{
+        border: none;
+        color:rgb(190 24 93);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: large;
+        cursor: pointer;
+        outline: white;
+        margin: auto;
+        display: block;
+      }
+
