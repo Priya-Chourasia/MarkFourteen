@@ -15,21 +15,44 @@ function submitHandler(){
 
 }
 function calculateProfitAndLoss(initial,quantity,current){
-if(initial>current){
-    var loss= (initial-current)*quantity;
-    var lossPercentage= (loss/initial)*100;
-    showOutput(`hey loss is ${loss} and loss% is ${lossPercentage}`);
-}else if(current>initial){
-    var profit= (current-initial)*quantity;
-    var profitPercentage= (profit/initial)*100;
-    showOutput(`hey profit is ${profit} and profit% is ${profitPercentage}`);
-}else{
-    showOutput(`No pain, No Gain`);
-}
+    if (initialPrice.value == "") {
+		validMsg();
+	} else if (stockQuantity.value == "") {
+		validMsg();
+	} else if (currentPrice.value == "") {
+		validMsg();
+	} else if (initialPrice.value == "0") {
+		validMsg();
+	} else if (stockQuantity.value == "0") {
+		validMsg();
+	} else if (currentPrice.value == "0") {
+		validMsg();
+	}else if (initialPrice.value<"0") {
+		validMsg(); 
+    }else if (stockQuantity.value<"0") {
+		validMsg(); 
+    }else if (currentPrice.value<"0") {
+		validMsg(); 
+    }else{
+        if(initial>current){
+            var loss= (initial-current)*quantity;
+            var lossPercentage= (loss/initial)*100;
+            showOutput(`hey loss is ${loss} and loss percentage is ${lossPercentage}`);
+        }else if(current>initial){
+            var profit= (current-initial)*quantity;
+            var profitPercentage= (profit/initial)*100;
+            showOutput(`hey profit is ${profit} and profit percentage is ${profitPercentage}`);
+        }else{
+            showOutput(`No pain, No Gain`);
+        }
+    }
 
 }
 
 function showOutput(message){
 
 outputBox.innerHTML=message;
+}
+function validMsg() {
+	showOutput("Please Enter Valid Prices");
 }
