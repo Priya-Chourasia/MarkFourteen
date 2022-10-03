@@ -15,24 +15,8 @@ function submitHandler(){
 
 }
 function calculateProfitAndLoss(initial,quantity,current){
-    if (initialPrice.value == "") {
+    if (initialPrice.value == ""||stockQuantity.value == ""||currentPrice.value == ""||initialPrice.value == "0"||stockQuantity.value == "0"||currentPrice.value == "0"||initialPrice.value<"0"||stockQuantity.value<"0"||currentPrice.value<"0") {
 		validMsg();
-	} else if (stockQuantity.value == "") {
-		validMsg();
-	} else if (currentPrice.value == "") {
-		validMsg();
-	} else if (initialPrice.value == "0") {
-		validMsg();
-	} else if (stockQuantity.value == "0") {
-		validMsg();
-	} else if (currentPrice.value == "0") {
-		validMsg();
-	}else if (initialPrice.value<"0") {
-		validMsg(); 
-    }else if (stockQuantity.value<"0") {
-		validMsg(); 
-    }else if (currentPrice.value<"0") {
-		validMsg(); 
     }else{
         if(initial>current){
             var loss= (initial-current)*quantity;
